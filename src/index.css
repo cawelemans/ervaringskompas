@@ -1,0 +1,511 @@
+/* reset */
+
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* generic styles */
+
+body {
+  color: #05164c;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+  padding: 2rem;
+  position: relative;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  html, body {
+    font-size: 3.4vw;
+  }
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+ol {
+  padding-left: 2rem;
+  list-style: decimal;
+}
+
+ul li {
+  line-height: 1.5;
+}
+
+ul li input {
+  margin-right: 0.5rem;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #eaeaea;
+  margin: 1rem 0;
+}
+
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #eaeaea;
+  min-height: 8rem;
+}
+
+header {
+  display: flex;
+}
+
+header div:nth-child(1) {
+  flex: 0.6;
+}
+
+header div:nth-child(2) {
+  flex: 0.4;
+  max-width: 500px;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    display: block;
+  }
+
+  header img {
+    max-width: 80%;
+  }
+}
+
+header h1 {
+  padding-left: 4rem;
+  font-size: 3rem;
+  background: url('./icon.svg') no-repeat left center;
+  background-size: 3rem;;
+}
+
+@media screen and (min-width: 1400px) {
+  #root {
+    max-width: 1262px;
+    margin: 0 auto;
+  }
+}
+
+/* legenda styling */
+
+.legenda {
+  display: inline-block;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #eaeaea;
+  background-color: #fafafa;
+  max-width: 40rem;
+}
+
+.legenda h2 {
+  margin-bottom: 0.5rem;
+}
+
+.legenda ol {
+  margin-bottom: 0.5rem;
+}
+
+/* table styling */
+
+table {
+  border-collapse: collapse;
+  height: 1px;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+tbody th {
+  text-align: left;
+  font-weight: normal;
+  max-width: 60rem;
+  padding: 0.5rem;
+}
+
+td,
+th {
+  border: 1px solid #f0f0f0;
+  vertical-align: middle;
+  min-width: 2rem;
+  padding: 0;
+}
+
+/* table form styling */
+
+table.form th.theme {
+  border: 1px solid;
+  padding: 1.25rem;
+}
+
+table.form td.white {
+  height: 1rem;
+  border: 0;
+}
+
+table.form tr.marked {
+  background-color: rgba(255, 225, 0, 0.1);
+}
+
+table.form thead th {
+  padding: 0.25rem 0.5rem;
+  position: relative;
+}
+
+table.form.skills thead th {
+  max-width: 2rem;
+}
+
+table.form.skills thead th label {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 2;
+}
+
+table.form thead th svg {
+  width: 1.4rem;
+  height: 1.4rem;
+  vertical-align: middle;
+}
+
+table.form tbody td {
+  width: 2.5rem;
+  position: relative;
+}
+
+table.form.skills tbody td.skill-grade,
+table.form.skills tbody td.skill-name {
+  width: auto;
+  padding: 0.5rem;
+}
+
+table.form.skills tbody td.skill-grade label {
+  left: 0;
+  padding: 0.5rem;
+}
+
+table.form tbody td label {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  top: 0;
+}
+
+table.form h3 {
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
+table.form h3 span {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1rem;
+  line-height: 2rem;
+  text-align: center;
+  border-radius: 1rem;
+  margin-right: 1rem;
+  background-color: rgba(0, 0, 0, 0.15);
+  vertical-align: top;
+}
+
+table.form tbody input {
+  cursor: pointer;
+  width: 1rem;
+  height: 1rem;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+table.form tr.selectable:hover {
+  background: #fafafa;
+}
+
+table.form.skills tr.selectable {
+  color: #9095a5;
+} 
+
+table.form.skills tr.selectable.basic {
+  color: #000;
+}
+
+table.form.skills .theme {
+  border: none;
+}
+
+table.form.skills .theme  h3 {
+  text-shadow: none;
+}
+
+table.form.skills .skillGroup {
+  background: #beedff;
+  color: #2284aa;
+  font-weight: bold;
+  border: none;
+}
+
+table.form.skills .theme.diagnostiek {
+  background-color: #9ad48c;
+}
+
+table.form.skills .theme.diagnostiek h3 {
+  color: #405a3a;
+}
+
+table.form.skills .theme.therapie {
+  background-color: #f3e074;
+}
+
+table.form.skills .theme.therapie h3 {
+  color: #74682f;
+}
+
+@media screen and (max-width: 768px) {
+  table.form thead th {
+    padding: 0.25rem;
+  }
+
+  table.form tbody td {
+    width: auto;
+  }
+}
+
+/* result table styling */
+
+.result table {
+  width: 100%;
+  max-width: 60rem;
+}
+
+.result .progress {
+  position: relative;
+  padding: 0.25rem;
+}
+
+.result .progress::before {
+  position: absolute;
+  top: 0.5rem;
+  content: '';
+  display: block;
+  width: calc(100% - 0.5rem);
+  height: 1rem;
+  background-color: #fafafa;
+}
+
+.result .bar {
+  position: absolute;
+  top: 0.5rem;
+  height: 1rem;
+  min-width: 2px;
+  background-color: #4472c4;
+}
+
+.result th {
+  padding: 0.25rem;
+  width: 50%;
+}
+
+.result td {
+  vertical-align: top;
+  width: 50%;
+}
+
+.result td:nth-child(2) {
+  text-align: right;
+  padding: 0.25rem 0.5rem;
+  width: 2.5rem;
+}
+
+.tag span {
+  width: 1rem;
+  height: 1rem;
+  display: inline-block;
+  border-radius: 0.5rem;
+  vertical-align: text-top;
+  margin-right: 0.25rem;
+}
+
+@media screen and (max-width: 768px) {
+  .result table {
+    width: 100%;
+  }
+
+  .result .progress {
+    max-width: 40vw;
+  }
+
+  .result td:nth-child(2) {
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+.actions span,
+.actions button {
+  display: inline-block;
+  background: #4472c4;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  line-height: 1.5rem;
+  font-size: 1rem;
+  margin: 0.5rem 0.5rem 0 0;
+}
+
+.actions span svg,
+.actions button svg {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.75rem;
+  vertical-align: text-top;
+}
+
+.actions span:hover,
+.actions button:hover {
+  background: #2e6ab3;
+}
+
+.actions input {
+  display: none;
+}
+
+[data-tooltip] {
+  position: absolute;
+}
+
+[data-tooltip]::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0.25rem 0.5rem 0 0.5rem;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.7) transparent transparent transparent;
+  z-index: 100;
+  opacity: 0;
+}
+
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%) translateY(-100%);
+  background: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  border-radius: 0.25rem;
+  pointer-events: none;
+  opacity: 0;
+}
+
+[data-tooltip]:hover::after,
+[data-tooltip]:hover::before {
+  opacity: 1
+}
+
+.print-notes {
+  display: none;
+}
+
+@media print {
+  table.form thead {
+    display: none;
+  }
+  table.form th {
+    background: none !important;
+  }
+  table.form h3 {
+    color: #05164c;
+    text-shadow: none;
+  }
+  .save-section {
+    display: none;
+  }
+  textarea {
+    display: none;
+  }
+  .print-notes {
+    display: block;
+  }
+}
