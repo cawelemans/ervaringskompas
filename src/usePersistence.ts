@@ -2,7 +2,7 @@ import { useReducer } from 'preact/hooks';
 import rawData from './data.json';
 import { decode } from './util';
 
-const SKILLS_PATH = '/vaardigheden';
+const SKILLS_PATH = '/ervaringskompas/vaardigheden';
 
 export interface StorageState {
   levels: number[][];
