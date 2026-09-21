@@ -215,7 +215,7 @@ export default function usePersistence(): PersistenceState {
   return {
     state,
     navigate: (skillMode: boolean) => {
-      window.location.pathname = skillMode ? SKILLS_PATH : '/ervaringskompas';
+      window.location.pathname = skillMode ? SKILLS_PATH : '/ervaringskompas/';
       dispatch({ type: 'navigate', skillMode });
     },
     select: (theme: number, experience: number, level: number) =>
